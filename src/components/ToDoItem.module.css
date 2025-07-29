@@ -1,0 +1,100 @@
+.todoItem {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-left: 4px solid #10b981;
+    transition: all 0.2s ease;
+    margin-bottom: 0.75rem;
+}
+
+.todoItem:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.todoItemOverdue {
+    background: #fef2f2;
+    border-left-color: #ef4444;
+}
+
+.itemContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.itemDetails {
+    flex: 1;
+    min-width: 0;
+}
+
+.itemName {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+    word-wrap: break-word;
+}
+
+.itemNameOverdue {
+    color: #7f1d1d;
+}
+
+.dateContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.dateBadge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.dateBadgeOverdue {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+}
+
+.deleteButton {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.deleteButton:hover {
+    background-color: #dc2626;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    .itemContent {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .deleteButton {
+        margin-left: 0;
+        margin-top: 0.75rem;
+        align-self: center;
+        width: fit-content;
+    }
+}
